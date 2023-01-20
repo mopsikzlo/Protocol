@@ -1,0 +1,520 @@
+<?php
+
+/*
+ *
+ *  ____            _        _   __  __ _                  __  __ ____
+ * |  _ \ ___   ___| | _____| |_|  \/  (_)_ __   ___      |  \/  |  _ \
+ * | |_) / _ \ / __| |/ / _ \ __| |\/| | | '_ \ / _ \_____| |\/| | |_) |
+ * |  __/ (_) | (__|   <  __/ |_| |  | | | | | |  __/_____| |  | |  __/
+ * |_|   \___/ \___|_|\_\___|\__|_|  |_|_|_| |_|\___|     |_|  |_|_|
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * @author PocketMine Team
+ * @link http://www.pocketmine.net/
+ *
+ *
+*/
+
+declare(strict_types=1);
+
+namespace pocketmine\network\mcpe\protocol\constants;
+
+use pocketmine\network\mcpe\protocol\ProtocolInfo;
+
+abstract class ActorMetadataList{
+	public const METADATA = [
+		ProtocolInfo::PROTOCOL_90 => [
+			"FLAGS" => 0,
+			"HEALTH" => 1,
+			"VARIANT" => 2,
+			"COLOR" => 3,
+			"COLOUR" => 3,
+			"NAMETAG" => 4,
+			"OWNER_EID" => 5,
+			"TARGET_EID" => 6,
+			"AIR" => 7,
+			"POTION_COLOR" => 8,
+			"POTION_AMBIENT" => 9,
+
+			"HURT_TIME" => 11,
+			"HURT_DIRECTION" => 12,
+			"PADDLE_TIME_LEFT" => 13,
+			"PADDLE_TIME_RIGHT" => 14,
+			"EXPERIENCE_VALUE" => 15,
+			"MINECART_DISPLAY_BLOCK" => 16,
+			"HORSE_FLAGS" => 16,
+			"MINECART_DISPLAY_OFFSET" => 17,
+			"SHOOTER_ID" => 17,
+			"MINECART_HAS_DISPLAY" => 18,
+			"HORSE_TYPE" => 19,
+
+			"CHARGE_AMOUNT" => 22,
+			"ENDERMAN_HELD_ITEM_ID" => 23,
+			"ENDERMAN_HELD_ITEM_DAMAGE" => 24,
+			"ENTITY_AGE" => 25,
+
+			"PLAYER_FLAGS" => 27,
+			"PLAYER_INDEX" => 28,
+			"PLAYER_BED_POSITION" => 29,
+			"FIREBALL_POWER_X" => 30,
+			"FIREBALL_POWER_Y" => 31,
+			"FIREBALL_POWER_Z" => 32,
+
+			"POTION_AUX_VALUE" => 37,
+			"LEAD_HOLDER_EID" => 38,
+			"SCALE" => 39,
+			"INTERACTIVE_TAG" => 40,
+
+			"NPC_SKIN_INDEX" => 42,
+			"NPC_ACTIONS" => 43,
+			"MAX_AIR" => 44,
+			"MARK_VARIANT" => 45,
+
+			"BOUNDING_BOX_WIDTH" => 54,
+			"BOUNDING_BOX_HEIGHT" => 55,
+			"FUSE_LENGTH" => 56,
+			"RIDER_SEAT_POSITION" => 57,
+			"RIDER_ROTATION_LOCKED" => 58,
+			"RIDER_MAX_ROTATION" => 59,
+			"RIDER_MIN_ROTATION" => 60
+		],
+		ProtocolInfo::PROTOCOL_110 => [
+			"NPC_SKIN_INDEX" => 41,
+			"NPC_ACTIONS" => 42,
+			"MAX_AIR" => 43,
+			"MARK_VARIANT" => 44,
+
+			"BLOCK_TARGET" => 48,
+			"WITHER_INVULNERABLE_TICKS" => 49,
+			"WITHER_TARGET_1" => 50,
+			"WITHER_TARGET_2" => 51,
+			"WITHER_TARGET_3" => 52,
+
+			"BOUNDING_BOX_WIDTH" => 54,
+			"BOUNDING_BOX_HEIGHT" => 55,
+			"FUSE_LENGTH" => 56,
+			"RIDER_SEAT_POSITION" => 57,
+			"RIDER_ROTATION_LOCKED" => 58,
+			"RIDER_MAX_ROTATION" => 59,
+			"RIDER_MIN_ROTATION" => 60,
+			"AREA_EFFECT_CLOUD_RADIUS" => 61,
+			"AREA_EFFECT_CLOUD_WAITING" => 62,
+			"AREA_EFFECT_CLOUD_PARTICLE_ID" => 63,
+
+			"SHULKER_ATTACH_FACE" => 65,
+
+			"SHULKER_ATTACH_POS" => 67,
+			"TRADING_PLAYER_EID" => 68,
+
+			"COMMAND_BLOCK_COMMAND" => 71,
+			"COMMAND_BLOCK_LAST_OUTPUT" => 72,
+			"COMMAND_BLOCK_TRACK_OUTPUT" => 73,
+			"CONTROLLING_RIDER_SEAT_NUMBER" => 74,
+			"STRENGTH" => 75,
+			"MAX_STRENGTH" => 76
+		],
+		ProtocolInfo::PROTOCOL_220 => [
+			"ENTITY_AGE" => 24,
+
+			"PLAYER_FLAGS" => 26,
+			"PLAYER_INDEX" => 27,
+			"PLAYER_BED_POSITION" => 28,
+			"FIREBALL_POWER_X" => 29,
+			"FIREBALL_POWER_Y" => 30,
+			"FIREBALL_POWER_Z" => 31,
+
+			"POTION_AUX_VALUE" => 36,
+			"LEAD_HOLDER_EID" => 37,
+			"SCALE" => 38,
+			"INTERACTIVE_TAG" => 39,
+			"NPC_SKIN_INDEX" => 40,
+			"NPC_ACTIONS" => 41,
+			"MAX_AIR" => 42,
+			"MARK_VARIANT" => 43,
+			"CONTAINER_TYPE" => 44,
+			"CONTAINER_BASE_SIZE" => 45,
+			"CONTAINER_EXTRA_SLOTS_PER_STRENGTH" => 46,
+			"BLOCK_TARGET" => 47,
+			"WITHER_INVULNERABLE_TICKS" => 48,
+			"WITHER_TARGET_1" => 49,
+			"WITHER_TARGET_2" => 50,
+			"WITHER_TARGET_3" => 51,
+
+			"BOUNDING_BOX_WIDTH" => 53,
+			"BOUNDING_BOX_HEIGHT" => 54,
+			"FUSE_LENGTH" => 55,
+			"RIDER_SEAT_POSITION" => 56,
+			"RIDER_ROTATION_LOCKED" => 57,
+			"RIDER_MAX_ROTATION" => 58,
+			"RIDER_MIN_ROTATION" => 59,
+			"AREA_EFFECT_CLOUD_RADIUS" => 60,
+			"AREA_EFFECT_CLOUD_WAITING" => 61,
+			"AREA_EFFECT_CLOUD_PARTICLE_ID" => 62,
+
+			"SHULKER_ATTACH_FACE" => 64,
+
+			"SHULKER_ATTACH_POS" => 66,
+			"TRADING_PLAYER_EID" => 67,
+
+			"COMMAND_BLOCK_COMMAND" => 70,
+			"COMMAND_BLOCK_LAST_OUTPUT" => 71,
+			"COMMAND_BLOCK_TRACK_OUTPUT" => 72,
+			"CONTROLLING_RIDER_SEAT_NUMBER" => 73,
+			"STRENGTH" => 74,
+			"MAX_STRENGTH" => 75,
+
+			"LIMITED_LIFE" => 77,
+			"ARMOR_STAND_POSE_INDEX" => 78,
+			"ENDER_CRYSTAL_TIME_OFFSET" => 79,
+			"ALWAYS_SHOW_NAMETAG" => 80,
+			"COLOR_2" => 81,
+
+			"SCORE_TAG" => 83,
+			"BALLOON_ATTACHED_ENTITY" => 84,
+			"PUFFERFISH_SIZE" => 85,
+			"BOAT_BUBBLE_TIME" => 86,
+			"PLAYER_AGENT_EID" => 87,
+
+			"EAT_COUNTER" => 90,
+			"FLAGS2" => 91,
+
+			"AREA_EFFECT_CLOUD_DURATION" => 94,
+			"AREA_EFFECT_CLOUD_SPAWN_TIME" => 95,
+			"AREA_EFFECT_CLOUD_RADIUS_PER_TICK" => 96,
+			"AREA_EFFECT_CLOUD_RADIUS_CHANGE_ON_PICKUP" => 97,
+			"AREA_EFFECT_CLOUD_PICKUP_COUNT" => 98
+		],
+		ProtocolInfo::PROTOCOL_340 => [
+			"HAS_NPC_COMPONENT" => 39,
+
+			"INTERACTIVE_TAG" => 99,
+			"TRADE_TIER" => 100,
+			"MAX_TRADE_TIER" => 101,
+			"TRADE_XP" => 102
+		],
+		ProtocolInfo::PROTOCOL_354 => [
+			"SKIN_ID" => 40,
+			"NPC_SKIN_INDEX" => 41,
+			"NPC_ACTIONS" => 42,
+			"MAX_AIR" => 43,
+			"MARK_VARIANT" => 44,
+			"CONTAINER_TYPE" => 45,
+			"CONTAINER_BASE_SIZE" => 46,
+			"CONTAINER_EXTRA_SLOTS_PER_STRENGTH" => 47,
+			"BLOCK_TARGET" => 48,
+			"WITHER_INVULNERABLE_TICKS" => 49,
+			"WITHER_TARGET_1" => 50,
+			"WITHER_TARGET_2" => 51,
+			"WITHER_TARGET_3" => 52,
+
+			"BOUNDING_BOX_WIDTH" => 54,
+			"BOUNDING_BOX_HEIGHT" => 55,
+			"FUSE_LENGTH" => 56,
+			"RIDER_SEAT_POSITION" => 57,
+			"RIDER_ROTATION_LOCKED" => 58,
+			"RIDER_MAX_ROTATION" => 59,
+			"RIDER_MIN_ROTATION" => 60,
+			"AREA_EFFECT_CLOUD_RADIUS" => 61,
+			"AREA_EFFECT_CLOUD_WAITING" => 62,
+			"AREA_EFFECT_CLOUD_PARTICLE_ID" => 63,
+
+			"SHULKER_ATTACH_FACE" => 65,
+
+			"SHULKER_ATTACH_POS" => 67,
+			"TRADING_PLAYER_EID" => 68,
+
+			"COMMAND_BLOCK_COMMAND" => 71,
+			"COMMAND_BLOCK_LAST_OUTPUT" => 72,
+			"COMMAND_BLOCK_TRACK_OUTPUT" => 73,
+			"CONTROLLING_RIDER_SEAT_NUMBER" => 74,
+			"STRENGTH" => 75,
+			"MAX_STRENGTH" => 76,
+
+			"LIMITED_LIFE" => 78,
+			"ARMOR_STAND_POSE_INDEX" => 79,
+			"ENDER_CRYSTAL_TIME_OFFSET" => 80,
+			"ALWAYS_SHOW_NAMETAG" => 81,
+			"COLOR_2" => 82,
+
+			"SCORE_TAG" => 84,
+			"BALLOON_ATTACHED_ENTITY" => 85,
+			"PUFFERFISH_SIZE" => 86,
+			"BOAT_BUBBLE_TIME" => 87,
+			"PLAYER_AGENT_EID" => 88,
+
+			"EAT_COUNTER" => 91,
+			"FLAGS2" => 92,
+
+			"AREA_EFFECT_CLOUD_DURATION" => 95,
+			"AREA_EFFECT_CLOUD_SPAWN_TIME" => 96,
+			"AREA_EFFECT_CLOUD_RADIUS_PER_TICK" => 97,
+			"AREA_EFFECT_CLOUD_RADIUS_CHANGE_ON_PICKUP" => 98,
+			"AREA_EFFECT_CLOUD_PICKUP_COUNT" => 99,
+			"INTERACTIVE_TAG" => 100,
+			"TRADE_TIER" => 101,
+			"MAX_TRADE_TIER" => 102,
+			"TRADE_XP" => 103
+		],
+		ProtocolInfo::PROTOCOL_360 => [
+			"NPC_SKIN_INDEX" => 40,
+			"NPC_ACTIONS" => 41,
+			"MAX_AIR" => 42,
+			"MARK_VARIANT" => 43,
+			"CONTAINER_TYPE" => 44,
+			"CONTAINER_BASE_SIZE" => 45,
+			"CONTAINER_EXTRA_SLOTS_PER_STRENGTH" => 46,
+			"BLOCK_TARGET" => 47,
+			"WITHER_INVULNERABLE_TICKS" => 48,
+			"WITHER_TARGET_1" => 49,
+			"WITHER_TARGET_2" => 50,
+			"WITHER_TARGET_3" => 51,
+
+			"BOUNDING_BOX_WIDTH" => 53,
+			"BOUNDING_BOX_HEIGHT" => 54,
+			"FUSE_LENGTH" => 55,
+			"RIDER_SEAT_POSITION" => 56,
+			"RIDER_ROTATION_LOCKED" => 57,
+			"RIDER_MAX_ROTATION" => 58,
+			"RIDER_MIN_ROTATION" => 59,
+			"AREA_EFFECT_CLOUD_RADIUS" => 60,
+			"AREA_EFFECT_CLOUD_WAITING" => 61,
+			"AREA_EFFECT_CLOUD_PARTICLE_ID" => 62,
+
+			"SHULKER_ATTACH_FACE" => 64,
+
+			"SHULKER_ATTACH_POS" => 66,
+			"TRADING_PLAYER_EID" => 67,
+
+			"COMMAND_BLOCK_COMMAND" => 70,
+			"COMMAND_BLOCK_LAST_OUTPUT" => 71,
+			"COMMAND_BLOCK_TRACK_OUTPUT" => 72,
+			"CONTROLLING_RIDER_SEAT_NUMBER" => 73,
+			"STRENGTH" => 74,
+			"MAX_STRENGTH" => 75,
+
+			"LIMITED_LIFE" => 77,
+			"ARMOR_STAND_POSE_INDEX" => 78,
+			"ENDER_CRYSTAL_TIME_OFFSET" => 79,
+			"ALWAYS_SHOW_NAMETAG" => 80,
+			"COLOR_2" => 81,
+
+			"SCORE_TAG" => 83,
+			"BALLOON_ATTACHED_ENTITY" => 84,
+			"PUFFERFISH_SIZE" => 85,
+			"BOAT_BUBBLE_TIME" => 86,
+			"PLAYER_AGENT_EID" => 87,
+
+			"EAT_COUNTER" => 90,
+			"FLAGS2" => 91,
+
+			"AREA_EFFECT_CLOUD_DURATION" => 94,
+			"AREA_EFFECT_CLOUD_SPAWN_TIME" => 95,
+			"AREA_EFFECT_CLOUD_RADIUS_PER_TICK" => 96,
+			"AREA_EFFECT_CLOUD_RADIUS_CHANGE_ON_PICKUP" => 97,
+			"AREA_EFFECT_CLOUD_PICKUP_COUNT" => 98,
+			"INTERACTIVE_TAG" => 99,
+			"TRADE_TIER" => 100,
+			"MAX_TRADE_TIER" => 101,
+			"TRADE_XP" => 102,
+			"SKIN_ID" => 103,
+
+			"COMMAND_BLOCK_TICK_DELAY" => 105,
+			"COMMAND_BLOCK_EXECUTE_ON_FIRST_TICK" => 106,
+			"AMBIENT_SOUND_INTERVAL_MIN" => 107,
+			"AMBIENT_SOUND_INTERVAL_RANGE" => 108,
+			"AMBIENT_SOUND_EVENT" => 109
+		]
+	];
+
+	public const FLAGS = [
+		ProtocolInfo::PROTOCOL_90 => [
+			"ONFIRE" => 0,
+			"SNEAKING" => 1,
+			"RIDING" => 2,
+			"SPRINTING" => 3,
+			"ACTION" => 4,
+			"INVISIBLE" => 5,
+			"TEMPTED" => 6,
+			"INLOVE" => 7,
+			"SADDLED" => 8,
+			"POWERED" => 9,
+			"IGNITED" => 10,
+			"BABY" => 11,
+			"CONVERTING" => 12,
+			"CRITICAL" => 13,
+			"CAN_SHOW_NAMETAG" => 14,
+			"ALWAYS_SHOW_NAMETAG" => 15,
+			"IMMOBILE" => 16,
+			"NO_AI" => 16,
+			"SILENT" => 17,
+			"WALLCLIMBING" => 18,
+			"RESTING" => 19,
+			"SITTING" => 20,
+			"ANGRY" => 21,
+			"INTERESTED" => 22,
+			"CHARGED" => 23,
+			"TAMED" => 24,
+			"LEASHED" => 25,
+			"SHEARED" => 26,
+			"GLIDING" => 27,
+			"ELDER" => 28,
+			"MOVING" => 29,
+			"BREATHING" => 30,
+			"CHESTED" => 31,
+			"STACKABLE" => 32,
+			"SHOWBASE" => 33,
+			"REARING" => 34,
+			"VIBRATING" => 35,
+			"IDLING" => 36
+		],
+		ProtocolInfo::PROTOCOL_110 => [
+			"CAN_CLIMB" => 19,
+			"SWIMMER" => 20,
+			"CAN_FLY" => 21,
+			"RESTING" => 22,
+			"SITTING" => 23,
+			"ANGRY" => 24,
+			"INTERESTED" => 25,
+			"CHARGED" => 26,
+			"TAMED" => 27,
+			"LEASHED" => 28,
+			"SHEARED" => 29,
+			"GLIDING" => 30,
+			"ELDER" => 31,
+			"MOVING" => 32,
+			"BREATHING" => 33,
+			"CHESTED" => 34,
+			"STACKABLE" => 35,
+			"SHOWBASE" => 36,
+			"REARING" => 37,
+			"VIBRATING" => 38,
+			"IDLING" => 39,
+			"EVOKER_SPELL" => 40,
+			"CHARGE_ATTACK" => 41,
+			"WASD_CONTROLLED" => 42,
+			"CAN_POWER_JUMP" => 43,
+
+			"LINGER" => 45
+		],
+		ProtocolInfo::PROTOCOL_130 => [
+			"LINGER" => 44,
+			"HAS_COLLISION" => 45,
+			"AFFECTED_BY_GRAVITY" => 46,
+			"FIRE_IMMUNE" => 47,
+			"DANCING" => 48
+		],
+		ProtocolInfo::PROTOCOL_221 => [
+			"WALKER" => 22,
+			"RESTING" => 23,
+			"SITTING" => 24,
+			"ANGRY" => 25,
+			"INTERESTED" => 26,
+			"CHARGED" => 27,
+			"TAMED" => 28,
+			"LEASHED" => 29,
+			"SHEARED" => 30,
+			"GLIDING" => 31,
+			"ELDER" => 32,
+			"MOVING" => 33,
+			"BREATHING" => 34,
+			"CHESTED" => 35,
+			"STACKABLE" => 36,
+			"SHOWBASE" => 37,
+			"REARING" => 38,
+			"VIBRATING" => 39,
+			"IDLING" => 40,
+			"EVOKER_SPELL" => 41,
+			"CHARGE_ATTACK" => 42,
+			"WASD_CONTROLLED" => 43,
+			"CAN_POWER_JUMP" => 44,
+			"LINGER" => 45,
+			"HAS_COLLISION" => 46,
+			"AFFECTED_BY_GRAVITY" => 47,
+			"FIRE_IMMUNE" => 48,
+			"DANCING" => 49,
+			"ENCHANTED" => 50,
+			"SHOW_TRIDENT_ROPE" => 51,
+			"CONTAINER_PRIVATE" => 52,
+			"TRANSFORMING" => 53,
+			"SPIN_ATTACK" => 54,
+			"SWIMMING" => 55,
+			"BRIBED" => 56
+		],
+		ProtocolInfo::PROTOCOL_290 => [
+			"ORPHANED" => 29,
+			"LEASHED" => 30,
+			"SHEARED" => 31,
+			"GLIDING" => 32,
+			"ELDER" => 33,
+			"MOVING" => 34,
+			"BREATHING" => 35,
+			"CHESTED" => 36,
+			"STACKABLE" => 37,
+			"SHOWBASE" => 38,
+			"REARING" => 39,
+			"VIBRATING" => 40,
+			"IDLING" => 41,
+			"EVOKER_SPELL" => 42,
+			"CHARGE_ATTACK" => 43,
+			"WASD_CONTROLLED" => 44,
+			"CAN_POWER_JUMP" => 45,
+			"LINGER" => 46,
+			"HAS_COLLISION" => 47,
+			"AFFECTED_BY_GRAVITY" => 48,
+			"FIRE_IMMUNE" => 49,
+			"DANCING" => 50,
+			"ENCHANTED" => 51,
+			"SHOW_TRIDENT_ROPE" => 52,
+			"CONTAINER_PRIVATE" => 53,
+			"TRANSFORMING" => 54,
+			"SPIN_ATTACK" => 55,
+			"SWIMMING" => 56,
+			"BRIBED" => 57,
+			"PREGNANT" => 58,
+			"LAYING_EGG" => 59,
+			"RIDER_CAN_PICK" => 60,
+			"TRANSITION_SITTING" => 61,
+			"EATING" => 62,
+			"LAYING_DOWN" => 63,
+			"SNEEZING" => 64,
+			"TRUSTING" => 65,
+			"ROLLING" => 66,
+			"SCARED" => 67,
+			"IN_SCAFFOLDING" => 68,
+			"OVER_SCAFFOLDING" => 69,
+			"FALL_THROUGH_SCAFFOLDING" => 70,
+			"BLOCKING" => 71,
+			"DISABLE_BLOCKING" => 72,
+
+			"SLEEPING" => 74,
+
+			"TRADE_INTEREST" => 76,
+			"DOOR_BREAKER" => 77,
+			"BREAKING_OBSTRUCTION" => 78,
+			"DOOR_OPENER" => 79
+		],
+		ProtocolInfo::PROTOCOL_354 => [
+			"SLEEPING" => 75,
+
+			"TRADE_INTEREST" => 77,
+			"DOOR_BREAKER" => 78,
+			"BREAKING_OBSTRUCTION" => 79,
+			"DOOR_OPENER" => 80,
+			"ILLAGER_CAPTAIN" => 81,
+			"STUNNED" => 82,
+			"ROARING" => 83,
+			"DELAYED_ATTACKING" => 84,
+			"AVOIDING_MOBS" => 85,
+			"RANGED_ATTACK" => 86,
+			//"UNKNOWN_1" => 87,
+			//"UNKNOWN_2" => 88,
+			"STALK_AND_POUNCE_ON_TARGET" => 89,
+			"EMOTING_STATUS" => 90,
+			"RAIDER_CELEBRATION" => 91
+		]
+	];
+}
